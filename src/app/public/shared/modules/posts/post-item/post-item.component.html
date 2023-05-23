@@ -1,0 +1,43 @@
+<mat-card class="example-card" [routerLink]="'/post/' + post.slug">
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      class="bg-[url(https://material.angular.io/assets/img/examples/shiba1.jpg)] bg-no-repeat bg-cover"
+    ></div>
+    <mat-card-title>{{ post.title }}</mat-card-title>
+    <mat-card-subtitle>
+      <app-post-header
+        [category]="{
+          title: post.categoryTitle,
+          id: post.categoryId,
+          slug: post.categorySlug
+        }"
+        [author]="{ name: post.userName, id: post.userId }"
+      ></app-post-header>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="../../../assets/images/image.jpg"
+    alt="Photo of a Shiba Inu"
+    height="100"
+  />
+  <mat-card-content>
+    <div class="p-3 pt-7 text-lg">
+      <p>
+        {{ post.excerpt }}
+      </p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="px-5 pb-5">
+      <button *ngIf="tags.length < 1" mat-button>Details</button>
+
+      <mat-chip-listbox aria-label="Dog selection" *ngIf="tags.length > 0">
+        <mat-chip [routerLink]="'/tag/' + tag.slug" *ngFor="let tag of tags">
+          <div class="cursor-pointer">{{ tag.title }}</div>
+        </mat-chip>
+      </mat-chip-listbox>
+    </div>
+  </mat-card-actions>
+</mat-card>

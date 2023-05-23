@@ -1,0 +1,19 @@
+<div class="flex gap-2">
+  <div
+    *ngIf="category"
+    class="cursor-pointer"
+    [routerLink]="'/category/' + category.slug"
+  >
+    {{ category.title }}
+  </div>
+  /
+  <div>5 hours ago</div>
+  /
+  <div
+    *ngIf="author"
+    [routerLink]="'/author/' + author.id"
+    class="cursor-pointer"
+  >
+    by {{ author.name }}
+  </div>
+</div>
