@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <div class="flex w-full items-center h-full">
+    <button mat-icon-button class="mr-5" (click)="menuClicked.emit()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="flex-grow">CMS</span>
+
+    <button (click)="logout()"><mat-icon>logout</mat-icon></button>
+  </div>
+</mat-toolbar>

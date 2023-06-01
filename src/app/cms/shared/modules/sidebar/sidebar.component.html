@@ -1,0 +1,33 @@
+<div class="mt-8">
+  <div
+    routerLink="/dashboard"
+    class="menuItem"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLinkActive="active"
+    matRipple
+  >
+    <mat-icon>article</mat-icon> Posts
+  </div>
+
+  <div
+    routerLink="/dashboard/categories"
+    class="menuItem"
+    routerLinkActive="active"
+    matRipple
+  >
+    <mat-icon>drag_indicator</mat-icon> Categories
+  </div>
+
+  <div
+    routerLink="/dashboard/tags"
+    class="menuItem"
+    routerLinkActive="active"
+    matRipple
+  >
+    <mat-icon>tags</mat-icon> Tags
+  </div>
+
+  <div (click)="logout()" class="menuItem" matRipple>
+    <mat-icon>logout</mat-icon> Logout
+  </div>
+</div>

@@ -7,7 +7,7 @@
     {{ category.title }}
   </div>
   /
-  <div>5 hours ago</div>
+  <div>{{ moment(date).fromNow() }}</div>
   /
   <div
     *ngIf="author"

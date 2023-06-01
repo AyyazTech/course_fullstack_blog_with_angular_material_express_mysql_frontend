@@ -1,0 +1,9 @@
+tr {
+  &:hover {
+    @apply hover:bg-slate-200;
+  }
+}
+
+mat-icon {
+  @apply text-slate-600;
+}

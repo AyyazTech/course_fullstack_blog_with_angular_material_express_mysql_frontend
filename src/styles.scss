@@ -12,3 +12,9 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #fafafa;
 }
+
+mat-form-field {
+  .mdc-notched-outline__notch {
+    border-right: none !important;
+  }
+}

@@ -1,0 +1,7 @@
+.menuItem {
+  @apply flex items-center gap-2 px-5 text-base text-slate-700 cursor-pointer h-14;
+
+  &.active {
+    @apply bg-slate-200;
+  }
+}

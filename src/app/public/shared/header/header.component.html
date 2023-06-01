@@ -7,9 +7,11 @@
         class="text-black font-normal px-3 outline-none rounded-sm text-sm h-10 w-[60%]"
         type="text"
         placeholder="Search..."
+        (keyup.enter)="onSearch($event)"
       />
     </div>
     <button
+      (click)="showLoginDialog()"
       mat-button
       class="example-icon favorite-icon"
       aria-label="Example icon-button with heart icon"

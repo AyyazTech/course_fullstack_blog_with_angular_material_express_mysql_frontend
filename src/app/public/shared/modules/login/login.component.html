@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Login</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="p-5" [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label> Email </mat-label>
+    <input matInput placeholder="Enter email" formControlName="email" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label> Password </mat-label>
+    <input
+      type="password"
+      matInput
+      placeholder="Enter password"
+      formControlName="password"
+    />
+  </mat-form-field>
+
+  <div class="flex gap-2">
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+    <button mat-raised-button>Cancel</button>
+  </div>
+</div>

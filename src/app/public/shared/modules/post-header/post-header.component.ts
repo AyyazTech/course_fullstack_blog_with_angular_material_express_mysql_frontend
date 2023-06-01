@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import moment from 'moment';
 
 @Component({
   selector: 'app-post-header',
@@ -8,4 +9,7 @@ import { Component, Input } from '@angular/core';
 export class PostHeaderComponent {
   @Input() category: any;
   @Input() author: any;
+  @Input() date: any;
+
+  moment = moment;
 }

@@ -1,0 +1,10 @@
+<app-header (menuClicked)="drawer.toggle()"></app-header>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="w-60" mode="side" opened>
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
